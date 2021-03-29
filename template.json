@@ -1,0 +1,253 @@
+{
+    "Actor": {
+        "types": [
+            "knight"
+            
+        ],
+        "knight": {
+            "note": "",
+            "overdrives":[],
+            "caracsecondaire":{
+                "PA":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points d'Armure"
+                },
+                "PE":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Point d'Energie"
+                },
+                "CDF":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Champ de Force"
+                },
+                "PS":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points de Santé"
+                },
+                "PG":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points de Gloire"
+                },
+                "PX":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points d'Expérience"
+                },
+                "heroisme":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points d'Héroisme"
+                },
+                "contact":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points de Contact"
+                },
+                "espoir":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Points d'Espoir"
+                },
+                "defense":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Défense"
+                },
+                "reaction":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Réaction"
+                },
+                "initiative":{
+                    "valeur" : "1",
+                    "valeurmax" : "1",
+                    "nomaffichage" : "Initiative"
+                }
+            },
+            
+            "background": {
+                "avantages":{
+                    "nomaffichage" : "Avantages"
+                },
+                "inconvenients":{
+                    "nomaffichage" : "Inconvenients"
+                },
+                "motivationmajeur":{
+                    "nomaffichage" : "Motivation Majeur"
+                },
+                "motivationsmineures":{
+                    "nomaffichage" : "Motivation Mineures"
+                },
+                "archetype":{
+                    "nomaffichage" : "Archetype"
+                },
+                "hautfait":{
+                    "nomaffichage" : "Haut fait"
+                },
+                "blason":{
+                    "nomaffichage" : "Blason"
+                },
+                "section":{
+                    "nomaffichage" : "Section"
+                }
+            },
+            
+            "aspect": {
+                "chair": {
+                    "valeur" : "2",
+                    "nomaffichage" : "Chair",
+                    "caracteristique": {
+                        "deplacement": {
+                            "valeur": "1",
+                            "nomaffichage" : "Déplacement",
+                            "overdrive":[]
+                        },
+                        "force": {
+                            "valeur": "1",
+                            "nomaffichage" : "Force",
+                            "overdrive":[]
+                        },
+                        "endurance": {
+                            "valeur": "1",
+                            "nomaffichage" : "Endurance",
+                            "overdrive":[]
+                        }
+                    }
+                },
+                "bete":{
+                    "valeur" : "2",
+                    "nomaffichage" : "Bete",
+                    "caracteristique": {
+                        "hargne": {
+                            "valeur": "1",
+                            "nomaffichage" : "Hargne",
+                            "overdrive":[]
+                        },
+                        "combat": {
+                            "valeur": "1",
+                            "nomaffichage" : "Combat",
+                            "overdrive":[]
+                        },
+                        "instinct": {
+                            "valeur": "1",
+                            "nomaffichage" : "Instinct",
+                            "overdrive":[]
+                        }
+                    }
+                },
+                "machine":{
+                    "valeur" : "2",
+                    "nomaffichage" : "Machine",
+                    "caracteristique": {
+                        "tir": {
+                            "valeur": "1",
+                            "nomaffichage" : "Tir",
+                            "overdrive":[]
+                        },
+                        "savoir": {
+                            "valeur": "1",
+                            "nomaffichage" : "Savoir",
+                            "overdrive":[]
+                        },
+                        "technique": {
+                            "valeur": "1",
+                            "nomaffichage" : "Technique",
+                            "overdrive":[]
+                        }
+                    }
+                },
+                "dame":{
+                    "valeur" : "2",
+                    "nomaffichage" : "Dame",
+                    "caracteristique": {
+                        "aura": {
+                            "valeur": "1",
+                            "nomaffichage" : "Aura",
+                            "overdrive":[]
+                        },
+                        "parole": {
+                            "valeur": "1",
+                            "nomaffichage" : "Parole",
+                            "overdrive":[]
+                        },
+                        "sangfroid": {
+                            "valeur": "1",
+                            "nomaffichage" : "Sang-Froid",
+                            "overdrive":[]
+                        }
+                    }
+                },
+                "masque":{
+                    "valeur" : "2",
+                    "nomaffichage" : "Masque",
+                    "caracteristique": {
+                        "discretion": {
+                            "valeur": "1",
+                            "nomaffichage" : "Discrétion",
+                            "overdrive":[]
+                        },
+                        "dexterite": {
+                            "valeur": "1",
+                            "nomaffichage" : "Dextérité",
+                            "overdrive":[]
+                        },
+                        "perception": {
+                            "valeur": "1",
+                            "nomaffichage" : "Perception",
+                            "overdrive":[]
+                        }
+                    }
+                }          
+                
+            }
+        }
+
+    },
+    "Item": {
+        "types": [
+            "armure",
+            "overdrive",
+            "bonusoverdrives"
+            
+        ],
+        "armure": {
+            "nomaffichage":"Armure",
+            "description": "",
+            "PA": "",
+            "PE": "",
+            "CDF": "",
+            "slots": {
+                "tete":"",
+                "BG":"",
+                "BD":"",
+                "torse":"",
+                "JG":"",
+                "JD":""
+            },
+            "bonusoverdrives": []
+        },
+        "overdrive": {
+            "nomaffichage":"Overdrives",
+            "description": "",
+            "caracteristique" :"",
+            "niveau":{
+                "1":"",
+                "2":"",
+                "3":"",
+                "4":"",
+                "5":""
+            }
+        },
+        "bonusoverdrives": {
+            "nomaffichage":"bonus overdrives",
+            "description": "",
+            "caracteristique" :"",
+            "bonus":""
+        }
+    }
+}
