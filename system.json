@@ -2,7 +2,7 @@
     "name": "knight",
     "title": "knight",
     "description": "knight system for FoundryVTT!",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.9",
     "templateVersion": 2,

@@ -9,8 +9,15 @@ export default class knightActorSheet extends ActorSheet{
         const formData = super.getData();
         //let formData = super.getData();
         formData.overdrivelist = this.actor.data.items.filter( item => item.type== 'overdrive');
-        
+        if (formData.actor.data.aspect.chair.valeur === '6'){
+            formData.actor.data.caracsecondaire.PE.valeurmax = '10';
+        }
+
+
+
         console.log(formData);
+
+        
 
         return formData;
       
@@ -29,19 +36,7 @@ export default class knightActorSheet extends ActorSheet{
         return this.actor.getOwnedItem(parent.data("itemId"));
     }
 
-    prepareData() {
-        const data = this.data;
-        console.log(data);
-        console.log(data.aspect.chair.valeur);
-        console.log(data.caracsecondaire.PA.valeurmax);
-        if (data.aspect.chair.valeur === '6'){
-            data.caracsecondaire.PA.valeurmax = '10';
-        }
-        console.log(data);
-        return data;
-        
-
-    }
+    
 _onItemEdit(event){
     const item = this.getItemFromEvent(event);
     item.sheet.render(true);
