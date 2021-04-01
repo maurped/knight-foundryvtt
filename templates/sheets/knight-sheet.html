@@ -7,7 +7,7 @@
             <h2>Background</h2>
         <tr>
             {{#each data.background as |back backnom|}}
-            <th>{{back.nomaffichage}}</th>
+            <th>{{backnom}}</th>
             {{/each}}
             
         </tr>
@@ -21,7 +21,11 @@
             <h2>Caractéristique secondaire</h2>
         <tr>
             {{#each data.caracsecondaire as |caractsecond caractsecondnom|}}
-            <td>{{caractsecond.nomaffichage}}</td>
+            <!--<td>{{caractsecond.nomaffichage}}</td>-->
+            <td>{{localize "knight.caracsecondaire.PA"}}</td>
+            
+            <td>{{localize "knight.caracsecondaire.{{caractsecondnom}}" }}</td>
+            
             {{/each}}
             
         </tr>
@@ -34,7 +38,7 @@
 
         <tr>
             {{#each data.caracsecondaire as |caractsecond caractsecondnom|}}
-            <td><input name="data.caracsecondaire.{{caractsecondnom}}.valeur" type="text" value="{{caractsecond.valeur}}" placeholder="{{caractsecond.valeur}}"/></td>
+            <td><input name="data.caracsecondaire.{{caractsecondnom}}.valeur" type="number" value="{{caractsecond.valeur}}" placeholder="{{caractsecond.valeur}}"/></td>
             {{/each}}
         </tr>
                 
@@ -50,43 +54,42 @@
         {{#each data.aspect as |aspe aspenom|}}
         <tr>
             <th></th>
-            <td><label>{{aspe.nomaffichage}}</label></td>
-            <td><input name="data.aspect.{{aspenom}}.valeur" type="text" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
-            <td><a class="jetdedes" title="Modification de l'objet"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
+            <td><label>{{aspenom}}</label></td>
+            <td><input name="data.aspect.{{aspenom}}.valeur" type="number" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
+            <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
         </tr>
         <th>
         
             <label>CARACTÉRISTIQUES</label>
         
             {{#each aspe.caracteristique as |caract caractnom|}}
-            <tr>
-                <th></th>
-                <td><label>{{caract.nomaffichage}}</label></td>
-                <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="text" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
-                <td><a class="jetdedes" title="Modification de l'objet"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
-            </tr>
                 <tr>
                     <th></th>
+                    <td><label>{{caractnom}}</label></td>
+                    <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="number" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
+                    <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
+                </tr>
+                <tr>
                     <th></th>
                     <th>Niveau</th>
                     <th>Description</th>
                 </tr>
+                
                 <th>
+                    <label>OVERDRIVES</label>
                 
-                <label>OVERDRIVES</label>
-                
-                {{#each overdrivelist as |item key|}}
-                <tr class="item" data-item-id="{{item._id}}">
-                    <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
-                    <td>{{item.data.description}}</td>
-                    <td>{{item.data.caracteristique}}</td>
-                    <td>
-                        <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </td>
-                </tr>
-                {{/each}}
-            </th>
+                    {{#each overdrivelist as |item key|}}
+                        <tr class="item" data-item-id="{{item._id}}">
+                            <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
+                            <td>{{item.data.description}}</td>
+                            <td>{{item.data.caracteristique}}</td>
+                            <td>
+                                <a class="item-edit" title="{{localize 'knight.item-edit'}}"><i class="fas fa-edit"></i></a>
+                                <a class="item-delete" title="{{localize 'knight.item-delete'}}"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </th>
             {{/each}}
         </th>
         {{/each}}
@@ -119,7 +122,7 @@
 -->  
     <table>
         <tr>
-            <th></th>
+            
             <th></th>
             <th>niveau</th>
             <th>description</th>
@@ -132,8 +135,8 @@
                     <td>{{item.data.description}}</td>
                     <td>{{item.data.caracteristique}}</td>
                     <td>
-                        <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        <a class="item-edit" title="{{localize 'knight.item-edit'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-delete" title="{{localize 'knight.item-delete'}}"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
     {{/each}}

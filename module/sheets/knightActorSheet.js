@@ -9,9 +9,7 @@ export default class knightActorSheet extends ActorSheet{
         const formData = super.getData();
         //let formData = super.getData();
         formData.overdrivelist = this.actor.data.items.filter( item => item.type== 'overdrive');
-        if (formData.actor.data.aspect.chair.valeur === '6'){
-            formData.actor.data.caracsecondaire.PE.valeurmax = '10';
-        }
+        
 
 
 

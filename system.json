@@ -2,18 +2,28 @@
     "name": "knight",
     "title": "knight",
     "description": "knight system for FoundryVTT!",
-    "version": "0.0.8",
+    "version": "0.1.1",
     "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.9",
-    "templateVersion": 2,
+    "templateVersion": 5,
     "author": "capitaine maurped",
     "esmodules": ["module/knight.js"],
     "styles": ["css/knight.css"],
     "scripts": [],
-    "packs": [
-
+    "packs": [],
+    "languages": [
+      {
+        "lang": "fr",
+        "name": "Francais",
+        "path": "lang/fr.json"
+      },
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      }
+      
     ],
-    "languages": [],
     "gridDistance": 1.5,
     "gridUnits": "m",
     "primaryTokenAttribute": "",

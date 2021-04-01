@@ -1,11 +1,11 @@
 import knightItemSheet from "./sheets/knightItemSheet.js";
 import knightActorSheet from "./sheets/knightActorSheet.js";
-//import { CtHackActor } from './actor/actor.js';
+import { knightActor } from './actor/actor.js';
 
 Hooks.once("init", () => {
     console.log("knight | Initialisation du système knight");
 // Define custom Entity classes
-//CONFIG.Actor.entityClass = CtHackActor;
+    CONFIG.Actor.entityClass = knightActor;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("knight", knightItemSheet, { makeDefault: true });

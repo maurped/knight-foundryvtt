@@ -9,197 +9,169 @@
             "overdrives":[],
             "caracsecondaire":{
                 "PA":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points d'Armure"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "PE":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Point d'Energie"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "CDF":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Champ de Force"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "PS":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points de Santé"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "PG":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points de Gloire"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "PX":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points d'Expérience"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "heroisme":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points d'Héroisme"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "contact":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points de Contact"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "espoir":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Points d'Espoir"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "defense":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Défense"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "reaction":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Réaction"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 },
                 "initiative":{
-                    "valeur" : "1",
-                    "valeurmax" : "1",
-                    "nomaffichage" : "Initiative"
+                    "valeur" : 1,
+                    "valeurmax" : 1
                 }
             },
             
             "background": {
-                "avantages":{
-                    "nomaffichage" : "Avantages"
-                },
-                "inconvenients":{
-                    "nomaffichage" : "Inconvenients"
-                },
-                "motivationmajeur":{
-                    "nomaffichage" : "Motivation Majeur"
-                },
-                "motivationsmineures":{
-                    "nomaffichage" : "Motivation Mineures"
-                },
-                "archetype":{
-                    "nomaffichage" : "Archetype"
-                },
-                "hautfait":{
-                    "nomaffichage" : "Haut fait"
-                },
-                "blason":{
-                    "nomaffichage" : "Blason"
-                },
-                "section":{
-                    "nomaffichage" : "Section"
-                }
+                "avantages":[],
+                "inconvenients":[],
+                "motivationmajeur":[],
+                "motivationsmineures":[],
+                "archetype":[],
+                "hautfait":[],
+                "blason":[],
+                "section":[]
             },
             
             "aspect": {
                 "chair": {
-                    "valeur" : "2",
-                    "nomaffichage" : "Chair",
+                    "valeur" : 1,
+                    
                     "caracteristique": {
                         "deplacement": {
-                            "valeur": "1",
-                            "nomaffichage" : "Déplacement",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "force": {
-                            "valeur": "1",
-                            "nomaffichage" : "Force",
-                            "overdrive":[]
+                            "valeur": 1,
+                           
+                            "overdrive":0
                         },
                         "endurance": {
-                            "valeur": "1",
-                            "nomaffichage" : "Endurance",
-                            "overdrive":[]
+                            "valeur": 1,
+                           
+                            "overdrive":0
                         }
                     }
                 },
                 "bete":{
-                    "valeur" : "2",
-                    "nomaffichage" : "Bete",
+                    "valeur" : 1,
+                    
                     "caracteristique": {
                         "hargne": {
-                            "valeur": "1",
-                            "nomaffichage" : "Hargne",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "combat": {
-                            "valeur": "1",
-                            "nomaffichage" : "Combat",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "instinct": {
-                            "valeur": "1",
-                            "nomaffichage" : "Instinct",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         }
                     }
                 },
                 "machine":{
-                    "valeur" : "2",
-                    "nomaffichage" : "Machine",
+                    "valeur" : 1,
+                    
                     "caracteristique": {
                         "tir": {
-                            "valeur": "1",
-                            "nomaffichage" : "Tir",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "savoir": {
-                            "valeur": "1",
-                            "nomaffichage" : "Savoir",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "technique": {
-                            "valeur": "1",
-                            "nomaffichage" : "Technique",
-                            "overdrive":[]
+                            "valeur": 1,
+                           
+                            "overdrive":0
                         }
                     }
                 },
                 "dame":{
-                    "valeur" : "2",
-                    "nomaffichage" : "Dame",
+                    "valeur" : 1,
+                    
                     "caracteristique": {
                         "aura": {
-                            "valeur": "1",
-                            "nomaffichage" : "Aura",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "parole": {
-                            "valeur": "1",
-                            "nomaffichage" : "Parole",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "sangfroid": {
-                            "valeur": "1",
-                            "nomaffichage" : "Sang-Froid",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         }
                     }
                 },
                 "masque":{
-                    "valeur" : "2",
-                    "nomaffichage" : "Masque",
+                    "valeur" : 1,
+                    
                     "caracteristique": {
                         "discretion": {
-                            "valeur": "1",
-                            "nomaffichage" : "Discrétion",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "dexterite": {
-                            "valeur": "1",
-                            "nomaffichage" : "Dextérité",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         },
                         "perception": {
-                            "valeur": "1",
-                            "nomaffichage" : "Perception",
-                            "overdrive":[]
+                            "valeur": 1,
+                            
+                            "overdrive":0
                         }
                     }
                 }          
