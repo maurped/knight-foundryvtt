@@ -21,10 +21,10 @@
             <h2>Caractéristique secondaire</h2>
         <tr>
             {{#each data.caracsecondaire as |caractsecond caractsecondnom|}}
-            <!--<td>{{caractsecond.nomaffichage}}</td>-->
-            <td>{{localize "knight.caracsecondaire.PA"}}</td>
+            <!--<td>{{caractsecond.nomaffichage}}</td>
+            <td>{{localize 'knight.caracsecondaire.PA'}}</td>-->
             
-            <td>{{localize "knight.caracsecondaire.{{caractsecondnom}}" }}</td>
+            <td>{{localize  (tocaractsecondaff caractsecondnom)}}</td>
             
             {{/each}}
             
@@ -54,7 +54,7 @@
         {{#each data.aspect as |aspe aspenom|}}
         <tr>
             <th></th>
-            <td><label>{{aspenom}}</label></td>
+            <td><label>{{localize  (toaspeaff aspenom)}}</label></td>
             <td><input name="data.aspect.{{aspenom}}.valeur" type="number" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
             <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
         </tr>
@@ -65,7 +65,8 @@
             {{#each aspe.caracteristique as |caract caractnom|}}
                 <tr>
                     <th></th>
-                    <td><label>{{caractnom}}</label></td>
+                    
+                    <td><label>{{localize  (tocaractaff aspenom caractnom)}}</label></td>
                     <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="number" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
                     <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
                 </tr>
