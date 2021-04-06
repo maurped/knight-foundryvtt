@@ -1,22 +1,14 @@
 export default class knightActorSheet extends ActorSheet{
     get template(){
         console.log(`knight | Récupération du fichier html ${this.actor.data.type}-sheet.`);
-
         return `systems/knight/templates/sheets/${this.actor.data.type}-sheet.html`;
     }
 
     getData(){
         const formData = super.getData();
-        //let formData = super.getData();
+       
         formData.overdrivelist = this.actor.data.items.filter( item => item.type== 'overdrive');
-        
-
-
-
         console.log(formData);
-
-        
-
         return formData;
       
     }

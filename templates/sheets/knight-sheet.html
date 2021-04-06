@@ -65,8 +65,8 @@
             {{#each aspe.caracteristique as |caract caractnom|}}
                 <tr>
                     <th></th>
-                    
-                    <td><label>{{localize  (tocaractaff aspenom caractnom)}}</label></td>
+                    <td><label>{{localize  "knight.aspect.chair.deplacement"}}</label></td>
+                    <!--<td><label>{{localize  (tocaractaff aspenom caractnom)}}</label></td>-->
                     <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="number" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
                     <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
                 </tr>
