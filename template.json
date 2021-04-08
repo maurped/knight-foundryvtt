@@ -182,26 +182,85 @@
     },
     "Item": {
         "types": [
-            "armure",
+            "metaarmure",
             "overdrive",
             "bonusoverdrives"
             
         ],
-        "armure": {
-            "nomaffichage":"Armure",
+        "metaarmure": {
             "description": "",
-            "PA": "",
-            "PE": "",
-            "CDF": "",
+            "PA": 0,
+            "PE": 0,
+            "CDF": 0,
             "slots": {
-                "tete":"",
-                "BG":"",
-                "BD":"",
-                "torse":"",
-                "JG":"",
-                "JD":""
+                "tete":{
+                    "valeur":0
+                },
+                "BG":{
+                    "valeur":0
+                },
+                "BD":{
+                    "valeur":0
+                },
+                "torse":{
+                    "valeur":0
+                },
+                "JG":{
+                    "valeur":0
+                },
+                "JD":{
+                    "valeur":0
+                }
             },
-            "bonusoverdrives": []
+            "overdrivesbase": {
+                "deplacement": {
+                    "valeur": 0
+                },
+                "force": {
+                    "valeur": 0
+                },    
+                "endurance": {
+                    "valeur": 0
+                },
+                "hargne": {
+                    "valeur": 0 
+                },                      
+                "combat": {
+                    "valeur": 0
+                },
+                "instinct": {
+                    "valeur": 0
+                },
+                "tir": {
+                    "valeur": 0
+                },
+                "savoir": {
+                    "valeur": 0
+                },
+                "technique": {
+                    "valeur": 0
+                },
+                "aura": {
+                    "valeur": 0
+                },
+                "parole": {
+                    "valeur": 0
+                },
+                "sangfroid": {
+                    "valeur": 0
+                },
+                "discretion": {
+                    "valeur": 0
+                },
+                "dexterite": {
+                    "valeur": 0
+                },
+                "perception": {
+                    "valeur": 0
+                }
+
+            },
+            "types": []
         },
         "overdrive": {
             "nomaffichage":"Overdrives",

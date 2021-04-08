@@ -7,7 +7,8 @@
             <h2>Background</h2>
         <tr>
             {{#each data.background as |back backnom|}}
-            <th>{{backnom}}</th>
+            
+            <th>{{localize  (tobackaff backnom)}}</th>
             {{/each}}
             
         </tr>
@@ -54,10 +55,12 @@
         {{#each data.aspect as |aspe aspenom|}}
         <tr>
             <th></th>
+            
             <td><label>{{localize  (toaspeaff aspenom)}}</label></td>
             <td><input name="data.aspect.{{aspenom}}.valeur" type="number" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
             <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
         </tr>
+        
         <th>
         
             <label>CARACTÉRISTIQUES</label>
@@ -65,8 +68,8 @@
             {{#each aspe.caracteristique as |caract caractnom|}}
                 <tr>
                     <th></th>
-                    <td><label>{{localize  "knight.aspect.chair.deplacement"}}</label></td>
-                    <!--<td><label>{{localize  (tocaractaff aspenom caractnom)}}</label></td>-->
+                    
+                    <td><label>{{localize  (tocaractaff caractnom)}}</label></td>
                     <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="number" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
                     <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
                 </tr>
@@ -93,48 +96,28 @@
                 </th>
             {{/each}}
         </th>
+  
         {{/each}}
     </th>
     
         
 </table>
-<h3>OVERDRIVES</h3>
-<!--  
-<table>
-        <tr>
-            <th></th>
-            <th></th>
-            <th>description</th>
-            <th>caracteristique</th>
-        </tr>
-    {{#each actor.items as |item key|}}
-    <tr class="item" data-item-id="{{item._id}}">
-        <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
-        
-        <td>{{item.data.description}}</td>
-        <td>{{item.data.caracteristique}}</td>
-        <td>
-            <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </td>
-    </tr>
-    {{/each}}
-</table>
--->  
+<h3>Meta-Armures</h3>
+
     <table>
         <tr>
             
             <th></th>
-            <th>niveau</th>
+            <th>Nom</th>
             <th>description</th>
         </tr>
     
 
-    {{#each overdrivelist as |item key|}}
+    {{#each metaarmurelist as |item key|}}
                 <tr class="item" data-item-id="{{item._id}}">
                     <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
+                    <td>{{item.name}}</td>
                     <td>{{item.data.description}}</td>
-                    <td>{{item.data.caracteristique}}</td>
                     <td>
                         <a class="item-edit" title="{{localize 'knight.item-edit'}}"><i class="fas fa-edit"></i></a>
                         <a class="item-delete" title="{{localize 'knight.item-delete'}}"><i class="fas fa-trash"></i></a>

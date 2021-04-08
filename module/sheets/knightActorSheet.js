@@ -8,6 +8,7 @@ export default class knightActorSheet extends ActorSheet{
         const formData = super.getData();
        
         formData.overdrivelist = this.actor.data.items.filter( item => item.type== 'overdrive');
+        formData.metaarmurelist = this.actor.data.items.filter( item => item.type== 'metaarmure');
         console.log(formData);
         return formData;
       

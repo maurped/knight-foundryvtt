@@ -1,23 +1,46 @@
 export const registerHandlebarsHelpers = function() {
-
-    Handlebars.registerHelper('tocaractsecondaff', function(str) {
+    Handlebars.registerHelper('tobackaff', function(Strback) {
+        
+		var outStrback = 'knight.background.' + Strback;
+		//console.log(outStrback);
+        return outStrback;
+        
+	});
+    
+    Handlebars.registerHelper('tocaractsecondaff', function(Strcaractsecond) {
         
     
-		var outStrcaractsecond = 'knight.caracsecondaire.' + str;
-		return outStrcaractsecond;
+		var outStrcaractsecond = 'knight.caracsecondaire.' + Strcaractsecond;
+		//console.log(outStrcaractsecond);
+        return outStrcaractsecond;
 	});
     
-    Handlebars.registerHelper('toaspeaff', function(str) {
-         
-		var outStraspe = 'knight.aspect.' + str;
-		return outStraspe;
+    Handlebars.registerHelper('toaspeaff', function(Straspe) {
+        
+		var outStraspe = 'knight.aspect.' + Straspe;
+		//console.log(outStraspe); 
+        return outStraspe;
 	});
-    Handlebars.registerHelper('tocaractaff', function(aspe, caract) {
-        console.log(aspe, caract);
+    Handlebars.registerHelper('tocaractaff', function(Strcaract) {
+        //console.log(Strcaract);
     
-		var outStrcaract = 'knight.aspect.' + aspe.toLowerCase() + '.' + caract;
-        console.log(outStrcaract);
+		var outStrcaract = 'knight.caracteristique.' + Strcaract;
+        //console.log(outStrcaract);
 		return outStrcaract;
+	});
+	Handlebars.registerHelper('toslotsaff', function(Strslot) {
+        //console.log(Strslot);
+    
+		var outStrslot = 'knight.slot.' + Strslot;
+        //console.log(outStrslot);
+		return outStrslot;
+	});
+	Handlebars.registerHelper('tooverdrivesbasesaff', function(Stroverdrivesbase) {
+        //console.log(Stroverdrivesbase);
+    
+		var outStroverdrivesbase = 'knight.caracteristique.' + Stroverdrivesbase;
+        //console.log(outStroverdrivesbase);
+		return outStroverdrivesbase;
 	});
 
 

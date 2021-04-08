@@ -27,7 +27,13 @@ export class knightActor extends Actor {
    */
   _prepareCharacterData(actorData) {
     const data = actorData.data;
-    data.caracsecondaire.PA.valeurmax = Math.max(data.aspect.chair.caracteristique.deplacement.valeur, data.aspect.chair.caracteristique.force.valeur, data.aspect.chair.caracteristique.endurance.valeur)
+    data.metaliste = this.actor.data.items.filter( item => item.type== 'metaarmure');
+    data.metaliste.forEach((ametalist) => {
+      console.log(ametalist.PA)
+
+      
+    });
+    data.caracsecondaire.PA.valeurmax = Math.max(data.aspect.chair.caracteristique.deplacement.valeur, data.aspect.chair.caracteristique.force.valeur, data.aspect.chair.caracteristique.endurance.valeur) 
     data.caracsecondaire.PE.valeurmax = Math.max(data.aspect.chair.caracteristique.deplacement.valeur, data.aspect.chair.caracteristique.force.valeur, data.aspect.chair.caracteristique.endurance.valeur)
     data.caracsecondaire.CDF.valeurmax = Math.max(data.aspect.chair.caracteristique.deplacement.valeur, data.aspect.chair.caracteristique.force.valeur, data.aspect.chair.caracteristique.endurance.valeur)
     data.caracsecondaire.PS.valeurmax = Math.max(data.aspect.chair.caracteristique.deplacement.valeur, data.aspect.chair.caracteristique.force.valeur, data.aspect.chair.caracteristique.endurance.valeur)

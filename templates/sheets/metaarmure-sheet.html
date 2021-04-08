@@ -1,0 +1,70 @@
+<form class="{{cssClass}}" autocomplete="off">
+    
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="128" width="128"/>
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    <label>Description
+        
+    </label>
+
+    <textarea name="data.description" type="text" rows="2" placeholder="description" >{{data.description}}</textarea>
+    <table>
+        <h2>Divers</h2>
+        <tr>
+            <td>PA</td>
+            <td>PE</td>
+            <td>CDF</td>
+        </tr>
+        <tr>
+        <td><input name="data.PA" type="number" value="{{data.PA}}" /></td>
+    
+        <td><input name="data.PE" type="number"  value="{{data.PE}}"/></td>
+    
+    
+        <td><input name="data.CDF" type="number"  value="{{data.CDF}}"/></td>
+        </tr>
+    </table>
+    <table>
+        <h2>Slots</h2>
+    <tr>
+        {{#each data.slots as |slot slotsnom|}}
+               
+        <td>{{localize  (toslotsaff slotsnom)}}</td>
+        
+        {{/each}}
+        
+    </tr>
+   
+    <tr>
+        {{#each data.slots as |slot slotsnom|}}
+        <td>{{slotsnom.valeur}}</td>
+        {{/each}}
+    </tr>
+
+    <tr>
+        {{#each data.slots as |slot slotsnom|}}
+        <td><input name="data.slots.{{slotsnom}}.valeur" type="number" value="{{slot.valeur}}" placeholder="{{slot.valeur}}"/></td>
+        {{/each}}
+    </tr>
+            
+    </table>
+
+    <table>
+        <h2>OverDrive</h2>
+    <tr>
+        {{#each data.overdrivesbase as |overbase overbasenom|}}
+        <tr>    
+        <td>{{localize  (tooverdrivesbasesaff overbasenom)}}</td>
+        <td>{{overbasenom.valeur}}</td>
+        <td><input name="data.slots.{{overbasenom}}.valeur" type="number" value="{{overbase.valeur}}" placeholder="{{overbase.valeur}}"/></td>
+        </tr>   
+        {{/each}}
+        
+    </tr>
+   
+            
+    </table>
+     
+    
+    
+    
+</form>

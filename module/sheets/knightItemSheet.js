@@ -6,11 +6,10 @@ export default class knightItemSheet extends ItemSheet{
     }
 
     getData(){
-        const data = super.getData();
+        const formData = super.getData();
+       
         
-        
-        console.log(data);
-
-        return data;
+        console.log(formData);
+        return formData;
     }
 }
