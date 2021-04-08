@@ -46,16 +46,68 @@
         </table>
     </div>
 <div>
+    <table>
+        <h2>ASPECTS, CARACTÉRISTIQUES ET OVERDRIVES</h2>
         
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        
+        {{#each data.aspect as |aspe aspenom|}}
+        <tr>
+                    
+            <td rowspan="5"><label>{{localize  (toaspeaff aspenom)}}</label></td>
+            <td><input name="data.aspect.{{aspenom}}.valeur" type="number" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
+            <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
+        
+                {{#each aspe.caracteristique as |caract caractnom|}}
+                    
+                        <td><label>{{localize  (tocaractaff caractnom)}}</label></td>
+                        <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="number" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
+                        <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
+                   
+                        
+                        {{#each caract.overdrive as |over overnom|}}
+                            
+                        <ul>
+                            <td><input type="checkbox" id="scales" name="scales"></td>
+                            <td><label>{{localize  (tooveraff overnom caractnom)}}</label></td>
+                        
+                        </ul>    
+                        {{/each}}
+                   
+                    
+                {{/each}}
+            
+        </tr>
+        {{/each}}
+        
+    </table>
+
+
+    
+
+
+
+
+
+
+
 <table>
     <h2>ASPECTS, CARACTÉRISTIQUES ET OVERDRIVES</h2>
     
     <th>
         <label>ASPECTS</label>
+        
         {{#each data.aspect as |aspe aspenom|}}
         <tr>
-            <th></th>
-            
+                    
             <td><label>{{localize  (toaspeaff aspenom)}}</label></td>
             <td><input name="data.aspect.{{aspenom}}.valeur" type="number" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
             <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
@@ -73,11 +125,13 @@
                     <td><input name="data.aspect.{{aspenom}}.caracteristique.{{caractnom}}.valeur" type="number" value="{{caract.valeur}}" placeholder="{{caract.valeur}}"/></td>
                     <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{caract.valeur}}" data-nom="{{caract.nomaffichage}}"></i></a></td>
                 </tr>
+                <!--
                 <tr>
                     <th></th>
                     <th>Niveau</th>
                     <th>Description</th>
                 </tr>
+                -->
                 
                 <th>
                     <label>OVERDRIVES</label>
@@ -85,7 +139,7 @@
                     {{#each caract.overdrive as |over overnom|}}
                         <tr>
                         <th></th>
-
+                        <th><input type="checkbox" id="scales" name="scales"></th>
                         <td><label>{{localize  (tooveraff overnom caractnom)}}</label></td>
                         </tr>    
                     {{/each}}

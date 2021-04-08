@@ -49,6 +49,7 @@ export const registerHandlebarsHelpers = function() {
         //console.log(outStrover);
 		return outStrover;
 	});
+	
 
 
 
