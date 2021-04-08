@@ -82,16 +82,12 @@
                 <th>
                     <label>OVERDRIVES</label>
                 
-                    {{#each overdrivelist as |item key|}}
-                        <tr class="item" data-item-id="{{item._id}}">
-                            <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
-                            <td>{{item.data.description}}</td>
-                            <td>{{item.data.caracteristique}}</td>
-                            <td>
-                                <a class="item-edit" title="{{localize 'knight.item-edit'}}"><i class="fas fa-edit"></i></a>
-                                <a class="item-delete" title="{{localize 'knight.item-delete'}}"><i class="fas fa-trash"></i></a>
-                            </td>
-                        </tr>
+                    {{#each caract.overdrive as |over overnom|}}
+                        <tr>
+                        <th></th>
+
+                        <td><label>{{localize  (tooveraff over.niveau caractnom)}}</label></td>
+                        </tr>    
                     {{/each}}
                 </th>
             {{/each}}
@@ -130,7 +126,17 @@
 
 
 </div>
-
+ {{#each overdrivelist as |item key|}}
+                        <tr class="item" data-item-id="{{item._id}}">
+                            <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
+                            <td>{{item.data.description}}</td>
+                            <td>{{item.data.caracteristique}}</td>
+                            <td>
+                                <a class="item-edit" title="{{localize 'knight.item-edit'}}"><i class="fas fa-edit"></i></a>
+                                <a class="item-delete" title="{{localize 'knight.item-delete'}}"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    {{/each}}
        
     
     <label>Note
