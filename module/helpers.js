@@ -42,6 +42,13 @@ export const registerHandlebarsHelpers = function() {
         //console.log(outStroverdrivesbase);
 		return outStroverdrivesbase;
 	});
+	Handlebars.registerHelper('tooveraff', function(Strover, Strcaract) {
+        //console.log(Strover,Strcaract);
+    
+		var outStrover = 'knight.OD.' + Strcaract + '.'+ Strover;
+        //console.log(outStrover);
+		return outStrover;
+	});
 
 
 
