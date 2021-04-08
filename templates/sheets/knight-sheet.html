@@ -62,7 +62,7 @@
         {{#each data.aspect as |aspe aspenom|}}
         <tr>
                     
-            <td rowspan="5"><label>{{localize  (toaspeaff aspenom)}}</label></td>
+            <td><label>{{localize  (toaspeaff aspenom)}}</label></td>
             <td><input name="data.aspect.{{aspenom}}.valeur" type="number" value="{{aspe.valeur}}" placeholder="{{aspe.valeur}}"/></td>
             <td><a class="jetdedes" title="{{localize 'knight.jetdedes'}}"><i class="fas fa-dice-d20" data-dice="{{aspe.valeur}}" data-nom="{{aspe.nomaffichage}}"></i></a></td>
         
